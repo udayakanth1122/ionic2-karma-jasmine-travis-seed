@@ -1,0 +1,67 @@
+{
+  "dependencies": {
+    "angular2": "2.0.0-beta.6",
+    "es6-promise": "3.0.2",
+    "es6-shim": "0.33.13",
+    "ionic-angular": "~2.0.0-beta.2",
+    "ionicons": "3.0.0-alpha.3",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "zone.js": "0.5.14"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "0.15.10",
+    "chalk": "^1.1.1",
+    "codecov.io": "0.1.6",
+    "coveralls": "2.11.8",
+    "del": "^2.2.0",
+    "es6-module-loader": "^0.17.11",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-tslint": "^4.3.3",
+    "gulp-typescript": "^2.12.0",
+    "gulp-util": "^3.0.7",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.21",
+    "karma-chrome-launcher": "0.2.2",
+    "karma-coverage": "^0.5.3",
+    "karma-jasmine": "^0.3.7",
+    "karma-mocha-reporter": "^1.2.3",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "path": "^0.12.7",
+    "phantomjs-prebuilt": "^2.1.4",
+    "run-sequence": "^1.1.5",
+    "strip-sourcemap-loader": "0.0.1",
+    "systemjs": "^0.19.23",
+    "traceur": "0.0.103",
+    "ts-node": "^0.5.5",
+    "tslint": "^3.5.0",
+    "tslint-eslint-rules": "1.0.1",
+    "typescript": "1.8.2",
+    "typings": "^0.6.9"
+  },
+  "name": "clicker",
+  "description": "clicker: An Ionic project",
+  "cordovaPlugins": [
+    "cordova-sqlite-storage",
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard"
+  ],
+  "cordovaPlatforms": [
+    "android"
+  ],
+  "scripts": {
+    "postinstall": "typings install",
+    "start": "ionic serve",
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lathonez/clicker.git"
+  },
+  "license": "MIT"
+}
