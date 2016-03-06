@@ -1,3 +1,5 @@
+## This project is a seed project that is referring to this project: https://github.com/lathonez/clicker 
+
 ## Custom counter Ionic 2 + Angular 2 + Typescript learning project
 [![Build Status](https://travis-ci.org/lathonez/clicker.svg?branch=master)](https://travis-ci.org/lathonez/clicker) [![Coverage Status](https://coveralls.io/repos/lathonez/clicker/badge.svg?branch=master&service=github)](https://coveralls.io/github/lathonez/clicker?branch=master) [![codecov.io](https://codecov.io/github/lathonez/clicker/coverage.svg?branch=master)](https://codecov.io/github/lathonez/clicker?branch=master) [![Dependency Status](https://david-dm.org/lathonez/clicker.svg)](https://david-dm.org/lathonez/clicker) [![devDependency Status](https://david-dm.org/lathonez/clicker/dev-status.svg)](https://david-dm.org/lathonez/clicker#info=devDependencies)
 
