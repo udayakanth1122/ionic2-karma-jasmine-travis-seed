@@ -2,13 +2,26 @@
 # Configuration
 #
 
-language: node_js
+language: android
 
-node_js:
-  - "0.12"
+android:
+  components:
+    - android-23
+    - build-tools-23.0.2
+    - platform-tools
+
+env:
+  - CXX=g++-4.8
 
 notifications:
   email: true
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
 
 sudo: required
 
@@ -16,11 +29,24 @@ branches:
   only:
   - master
 
+#
+# Build Lifecycle:
+#
+
+before_install:
+  - rm -rf /home/travis/.nvm                                         #
+  - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -   # upgrade node manually as we're building on
+  #- sudo apt-get install -y nodejs                                   # android language and can't pick it in yml
+  #- sudo npm update -g npm
+  # The following three lines came from angular-seed, unsure
+  - export CHROME_BIN=chromium-browser
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+
 install:
   - npm install
   - npm install ionic-app-lib
-  - npm install -g ionic@beta
-  - npm install --save-dev ionic@beta
+  - npm install ionic@beta
 
 before_script:
 
