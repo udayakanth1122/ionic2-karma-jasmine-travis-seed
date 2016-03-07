@@ -20,6 +20,7 @@ install:
   - npm install
   - npm install ionic-app-lib
   - npm install -g ionic@beta
+  - npm install --save-dev ionic@beta
 
 before_script:
 
@@ -37,5 +38,4 @@ after_success:
 before_deploy:
   # build for android
   - sudo npm install -g cordova ionic
-  - sudo npm install -g ionic@beta
   - ionic state restore # install cordova stuff from package.json
