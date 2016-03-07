@@ -35,3 +35,8 @@ branches:
   
   env:
   - CXX=g++-4.8
+
+deploy:
+ - provider: script
+ - script: .travis/deploy.sh
+ - skip_cleanup: true
