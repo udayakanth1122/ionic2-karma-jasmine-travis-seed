@@ -1,62 +1,37 @@
-#
-# Configuration
-#
-
 language: node_js
 
 node_js:
-  - "0.12"
+- '4.0'
+- '4.1'
 
-env:
-  - CXX=g++-4.8
+sudo: true
 
-notifications:
-  email: true
-
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
-
-sudo: required
-
-branches:
-  only:
-  - master
-
-#
-# Build Lifecycle:
-#
+services:
 
 before_install:
-  - rm -rf /home/travis/.nvm                                         #
-  - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -   # upgrade node manually as we're building on
-  - sudo apt-get install -y nodejs                                   # android language and can't pick it in yml
-  - sudo npm update -g npm
-  # The following three lines came from angular-seed, unsure
-  - export CHROME_BIN=chromium-browser
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+- npm update -g npm
+- npm --version
+- export CHROME_BIN=chromium-browser
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
 
 install:
   - npm install
   - npm install ionic-app-lib
-  - npm install ionic@beta
-
+  - npm install --save-dev ionic@beta
+  
 before_script:
 
 script: npm test
 
+notifications:
+  email: true
+  
 after_failure: cat /home/travis/build/udayakanth1122/ionic2-karma-jasmine-travis-seed-project/npm-debug.log
 
-after_success:
-  # Send coverage info off to cloud ppl
-  - cat coverage/lcov.info | node_modules/.bin/coveralls
-  - cat coverage/lcov.info | ./node_modules/.bin/codecov
-
-before_deploy:
-  # build for android
-  - sudo npm install -g cordova ionic
-  - ionic state restore # install cordova stuff from package.json
+branches:
+  only:
+  - master
+  
+  env:
+  - CXX=g++-4.8
