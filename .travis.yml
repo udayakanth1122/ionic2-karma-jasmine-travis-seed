@@ -24,9 +24,7 @@ install:
 
 before_script:
 
-script: 
-  - npm postinstall
-  - npm test
+script: npm test
 
 after_failure: cat /home/travis/build/udayakanth1122/ionic2-karma-jasmine-travis-seed-project/npm-debug.log
 
