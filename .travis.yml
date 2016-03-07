@@ -41,10 +41,6 @@ after_success:
   # Send coverage info off to cloud ppl
   - cat coverage/lcov.info | node_modules/.bin/coveralls
   - cat coverage/lcov.info | ./node_modules/.bin/codecov
- 
-before_deploy:
- - sudo npm install -g cordova ionic
- - ionic state restore # install cordova stuff from package.json
 
 deploy:
  - provider: script
