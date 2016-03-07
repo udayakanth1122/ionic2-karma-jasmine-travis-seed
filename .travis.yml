@@ -2,13 +2,10 @@
 # Configuration
 #
 
-language: android
+language: node_js
 
-android:
-  components:
-    - android-23
-    - build-tools-23.0.2
-    - platform-tools
+node_js:
+  - "0.12"
 
 env:
   - CXX=g++-4.8
