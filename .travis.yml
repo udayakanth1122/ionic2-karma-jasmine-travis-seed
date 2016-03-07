@@ -33,8 +33,13 @@ branches:
   only:
   - master
   
-  env:
-  - CXX=g++-4.8
+env:
+ - CXX=g++-4.8
+ 
+before_deploy:
+ # build for android
+ - sudo npm install -g cordova ionic
+ - ionic state restore # install cordova stuff from package.json
 
 deploy:
  - provider: script
