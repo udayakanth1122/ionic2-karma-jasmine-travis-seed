@@ -36,8 +36,13 @@ branches:
 env:
  - CXX=g++-4.8
  
+after_success:
+  - git checkout master
+  # Send coverage info off to cloud ppl
+  - cat coverage/lcov.info | node_modules/.bin/coveralls
+  - cat coverage/lcov.info | ./node_modules/.bin/codecov
+ 
 before_deploy:
- # build for android
  - sudo npm install -g cordova ionic
  - ionic state restore # install cordova stuff from package.json
 
