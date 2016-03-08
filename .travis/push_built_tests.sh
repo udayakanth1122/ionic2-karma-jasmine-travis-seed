@@ -14,5 +14,5 @@ git checkout master
 # git remote rm origin                                       # originally cloned by travis on https
 # git remote add origin git@github.com:udayakanth1122/ionic2-karma-jasmine-travis-seed-project.git  # ditto
 # careful not to trigger another build
-# git -c user.name='travis' -c user.email='travis@travis-ci.org' commit -m "updating compiled tests [ci skip]"
-# git push origin master
+git -c user.name='travis' -c user.email='travis@travis-ci.org' commit -m "updating compiled tests [ci skip]"
+git push origin master
