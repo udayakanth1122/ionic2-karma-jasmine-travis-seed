@@ -9,6 +9,8 @@ sudo: true
 services:
 
 before_install:
+- rm -rf /home/travis/.nvm                                         #
+- curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -   # upgrade node manually as we're building on
 - npm update -g npm
 - npm --version
 - export CHROME_BIN=chromium-browser
