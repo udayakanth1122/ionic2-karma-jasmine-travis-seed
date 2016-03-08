@@ -1,7 +1,10 @@
-This project is a seed project that is referring to this project: https://github.com/lathonez/clicker 
+## Ionic 2 + Angular 2 + Typescript + Karma-Jasmine + Travis Seed project
+This project is a seed project that is referring to this project: https://github.com/lathonez/clicker.
+It covers how to write an app using the framework Ionic2 which is based on Angular2. The language use in this project is typescript and unit tests are written using Karma-Jasmine. The deployment is done using Travis.
 
-## Custom counter Ionic 2 + Angular 2 + Typescript learning project
-[![Build Status](https://travis-ci.org/lathonez/clicker.svg?branch=master)](https://travis-ci.org/lathonez/clicker) [![Coverage Status](https://coveralls.io/repos/lathonez/clicker/badge.svg?branch=master&service=github)](https://coveralls.io/github/lathonez/clicker?branch=master) [![codecov.io](https://codecov.io/github/lathonez/clicker/coverage.svg?branch=master)](https://codecov.io/github/lathonez/clicker?branch=master) [![Dependency Status](https://david-dm.org/lathonez/clicker.svg)](https://david-dm.org/lathonez/clicker) [![devDependency Status](https://david-dm.org/lathonez/clicker/dev-status.svg)](https://david-dm.org/lathonez/clicker#info=devDependencies)
+# Requirements
+1. nodejs
+2. travis
 
 # How to start
 
