@@ -1,5 +1,5 @@
 {
-  "name": "clicker",
+  "name": "testApp",
   "app_id": "d51c5324",
   "gulpStartupTasks": [
     "sass",
