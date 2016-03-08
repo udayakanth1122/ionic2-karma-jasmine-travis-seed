@@ -4,6 +4,7 @@
 #
 # travis clones in a weird way and the head gets detached, so checkout master again
 git checkout master
+git checkout .
 # decrypt private key that gives us push access and add it to ssh agent
 # openssl aes-256-cbc -K $encrypted_a2f47a5da016_key -iv $encrypted_a2f47a5da016_iv -in .travis/travis_rsa.pem.enc -out .travis/travis_rsa.pem -d                      #
 # eval "$(ssh-agent -s)"
@@ -14,5 +15,5 @@ git checkout master
 # git remote rm origin                                       # originally cloned by travis on https
 # git remote add origin git@github.com:udayakanth1122/ionic2-karma-jasmine-travis-seed-project.git  # ditto
 # careful not to trigger another build
-git -c user.name='travis' -c user.email='travis@travis-ci.org' commit -m "updating compiled tests [ci skip]"
-git push origin master
+# git -c user.name='travis' -c user.email='travis@travis-ci.org' commit -m "updating compiled tests [ci skip]"
+# git push origin master
