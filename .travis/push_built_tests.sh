@@ -6,10 +6,10 @@
 git checkout master
 git checkout .
 # decrypt private key that gives us push access and add it to ssh agent
-openssl aes-256-cbc -K $encrypted_a2f47a5da016_key -iv $encrypted_a2f47a5da016_iv -in .travis/travis_rsa.pem.enc -out .travis/travis_rsa.pem -d                      #
+openssl aes-256-cbc -K $encrypted_c4563c0abb0a_key -iv $encrypted_c4563c0abb0a_iv -in .travis/secret_text.txt.enc -out .travis/secret_text.txt -d                 
 eval "$(ssh-agent -s)"
-chmod 600 .travis/travis_rsa.pem
-ssh-add .travis/travis_rsa.pem
+chmod 600 .travis/secret_text.txt
+ssh-add .travis/secret_text.txt
 # using -f as www/build is in .gitignore for dev purposes
 git add -f www/build/test/app
 git remote rm origin                                       # originally cloned by travis on https
