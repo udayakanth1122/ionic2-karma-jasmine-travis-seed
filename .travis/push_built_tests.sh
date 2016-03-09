@@ -10,8 +10,6 @@ openssl aes-256-cbc -K $encrypted_c4563c0abb0a_key -iv $encrypted_c4563c0abb0a_i
 eval "$(ssh-agent -s)"
 echo "running chmod command"
 chmod 600 .travis/travis_deploy_key
-echo "moving the encryption file to id_rsa"
-mv .travis/travis_deploy_key ~/.ssh/id_rsa
 echo "adding encryption file to ssh"
 ssh-add .travis/travis_deploy_key
 # using -f as www/build is in .gitignore for dev purposes
