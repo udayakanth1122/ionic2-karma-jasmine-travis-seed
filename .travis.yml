@@ -1,59 +1,37 @@
 language: node_js
-
 node_js:
 - '4.0'
 - '4.1'
-
 sudo: true
-
 services:
-
 before_install:
-# - npm update -g npm
-# - npm --version
-# - export CHROME_BIN=chromium-browser
-# - export DISPLAY=:99.0
-# - sh -e /etc/init.d/xvfb start
-  - rm -rf /home/travis/.nvm                                         #
-  - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -   # upgrade node manually as we're building on
-  - sudo apt-get install -y nodejs                                   # android language and can't pick it in yml
-  - sudo npm update -g npm
-  - sudo npm install -g ionic-app-lib
-  # The following three lines came from angular-seed, unsure
-  - export CHROME_BIN=chromium-browser
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-
+- npm update -g npm
+- npm --version
+- export CHROME_BIN=chromium-browser
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
 install:
-  - npm install
-  - npm install ionic-app-lib
-  - npm install --save-dev ionic@beta
-
+- npm install
+- npm install ionic-app-lib
+- npm install --save-dev ionic@beta
 before_script:
-
 script: npm test
-
 notifications:
   email: true
-
 after_failure: cat /home/travis/build/udayakanth1122/ionic2-karma-jasmine-travis-seed-project/npm-debug.log
-
 branches:
   only:
   - master
-
 env:
- - CXX=g++-4.8
-
+  matrix:
+  - CXX=g++-4.8
+  global:
+    secure: a8utH48cfm+AqSGdQHwOE7FEge9ldex4pjgOF0wxFkSJRC7fEMCSxeNk94DqLFHM38Y7Lg0H+oxoHAdLpVnsBd0Xuo64jFp8NuEoUugGATmvzdj6+oL0qetnE2truIr7ZcyaLmuib62DThbmfC7vilmh4efnoKDaOZ5fA2y9Zo5UGwiwvD1YUvjvfC07nyaTfpypvsWw9v+KL5wA+mo3Y+NI2XEI+nEOsWFiu8200HFWv7BOftk/gH+mmZ9MEbxiwkUvWkzisFtXfmKxnQWegClL9PdNgWszUbaPogyOQULcQdyLlz4Lcq7n5zJxjSmqWDtduajkled8VBFG2IFhnR1ay4Z86hyL7zG+NAOJcgn/BIak+o45Cht5O/oZm0jjxhCqP5ahgXDFtg3o4vyDgr8e7NdStTwC0WjLBKs7IHNSXty9SK3R2r2l3XTPmFrdlygWvQ2W3L3k96Qg0Txv3G/UAy6p2ZokEmwcQT8qdsEGRmD4EZAxdVUZcIFYRceIz3KigczWowlKyCeAMizgXEQyLZ87LU7vTYZ7qe4V3l1+y3XmeP85ZN1iMUid+MX1uv0kvuvrCXnGsi5Tt4zR4xVBQkqZh3zHO1SVSgtrPky9PVkuZgYquA8dvbllm6skejWfSoaCV2pYbpPyhK9KASEj2BMN0ARsdxoChE7KXxw=
 after_success:
-  # push compiled TS to test folder in git for reference in coveralls
-  - .travis/push_built_tests.sh
-  # - git checkout .
-  # Send coverage info off to cloud ppl
-  - cat coverage/lcov.info | node_modules/.bin/coveralls
-  - cat coverage/lcov.info | ./node_modules/.bin/codecov
-
+# - .travis/push_built_tests.sh
+- cat coverage/lcov.info | node_modules/.bin/coveralls
+- cat coverage/lcov.info | ./node_modules/.bin/codecov
 deploy:
- - provider: script
- - script: .travis/deploy.sh
- - skip_cleanup: true
+- provider: script
+- script: .travis/deploy.sh
+- skip_cleanup: true
