@@ -2,6 +2,12 @@ language: node_js
 node_js:
 - '4.0'
 - '4.1'
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
 sudo: required
 services:
 before_install:
@@ -18,7 +24,7 @@ before_script:
 script: npm test
 notifications:
   email: true
-after_failure: cat /home/travis/build/udayakanth1122/ionic2-karma-jasmine-travis-seed-project/npm-debug.log
+after_failure: cat /home/travis/build/udayakanth1122/ionic2-karma-jasmine-travis-seed/npm-debug.log
 branches:
   only:
   - master
