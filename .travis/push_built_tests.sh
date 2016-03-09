@@ -8,7 +8,9 @@ git checkout .
 # decrypt private key that gives us push access and add it to ssh agent
 openssl aes-256-cbc -K $encrypted_c4563c0abb0a_key -iv $encrypted_c4563c0abb0a_iv -in .travis/super_secret.pem.enc -out .travis/super_secret.pem -d
 eval "$(ssh-agent -s)"
+echo "running chmod command"
 chmod 600 .travis/super_secret.pem
+echo "adding encryption file to ssh"
 ssh-add .travis/super_secret.pem
 # using -f as www/build is in .gitignore for dev purposes
 git add -f www/build/test/app
