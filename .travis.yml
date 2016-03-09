@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - '4.0'
 - '4.1'
-sudo: true
+sudo: required
 services:
 before_install:
 - npm update -g npm
@@ -25,12 +25,8 @@ branches:
 env:
   matrix:
   - CXX=g++-4.8
-  global:
-    secure: a8utH48cfm+AqSGdQHwOE7FEge9ldex4pjgOF0wxFkSJRC7fEMCSxeNk94DqLFHM38Y7Lg0H+oxoHAdLpVnsBd0Xuo64jFp8NuEoUugGATmvzdj6+oL0qetnE2truIr7ZcyaLmuib62DThbmfC7vilmh4efnoKDaOZ5fA2y9Zo5UGwiwvD1YUvjvfC07nyaTfpypvsWw9v+KL5wA+mo3Y+NI2XEI+nEOsWFiu8200HFWv7BOftk/gH+mmZ9MEbxiwkUvWkzisFtXfmKxnQWegClL9PdNgWszUbaPogyOQULcQdyLlz4Lcq7n5zJxjSmqWDtduajkled8VBFG2IFhnR1ay4Z86hyL7zG+NAOJcgn/BIak+o45Cht5O/oZm0jjxhCqP5ahgXDFtg3o4vyDgr8e7NdStTwC0WjLBKs7IHNSXty9SK3R2r2l3XTPmFrdlygWvQ2W3L3k96Qg0Txv3G/UAy6p2ZokEmwcQT8qdsEGRmD4EZAxdVUZcIFYRceIz3KigczWowlKyCeAMizgXEQyLZ87LU7vTYZ7qe4V3l1+y3XmeP85ZN1iMUid+MX1uv0kvuvrCXnGsi5Tt4zR4xVBQkqZh3zHO1SVSgtrPky9PVkuZgYquA8dvbllm6skejWfSoaCV2pYbpPyhK9KASEj2BMN0ARsdxoChE7KXxw=
 after_success:
-# - .travis/push_built_tests.sh
-- git checkout master
-- git checkout .
+- .travis/push_built_tests.sh
 - cat coverage/lcov.info | node_modules/.bin/coveralls
 - cat coverage/lcov.info | ./node_modules/.bin/codecov
 deploy:
