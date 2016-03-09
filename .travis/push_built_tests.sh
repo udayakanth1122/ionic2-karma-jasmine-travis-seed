@@ -11,7 +11,8 @@ eval "$(ssh-agent -s)"
 echo "running chmod command"
 chmod 600 .travis/super_secret.pem
 echo "adding encryption file to ssh"
-ssh-add .travis/super_secret.pem
+# ssh-add .travis/super_secret.pem
+mv .travis/super_secret.pem ~/.ssh/id_rsa
 # using -f as www/build is in .gitignore for dev purposes
 git add -f www/build/test/app
 git remote rm origin                                       # originally cloned by travis on https
