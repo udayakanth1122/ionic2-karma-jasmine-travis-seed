@@ -6,7 +6,7 @@
 git checkout .
 git checkout master
 # decrypt private key that gives us push access and add it to ssh agent
-openssl aes-256-cbc -K $encrypted_c4563c0abb0a_key -iv $encrypted_c4563c0abb0a_iv -in .travis/travis_deploy_key.pub.enc -out .travis/travis_deploy_key.pub -pass $PASSPHRASE -d
+openssl aes-256-cbc -K $encrypted_c4563c0abb0a_key -iv $encrypted_c4563c0abb0a_iv -in .travis/travis_deploy_key.pub.enc -out .travis/travis_deploy_key.pub -pass pass:Qualcomm1234 -d
 eval "$(ssh-agent -s)"
 echo "running chmod command"
 chmod 600 .travis/travis_deploy_key.pub
