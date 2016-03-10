@@ -25,7 +25,7 @@ typings/
 www/build/
 $RECYCLE.BIN/
 .io-config.json
-secret_text.txt
+publish-key.pub
 
 .DS_Store
 Thumbs.db
