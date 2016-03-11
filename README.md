@@ -1,5 +1,6 @@
 ## Ionic 2 + Angular 2 + Typescript + Karma-Jasmine + Travis Seed project
 [![Build Status](https://travis-ci.org/udayakanth1122/ionic2-karma-jasmine-travis-seed.svg?branch=master)](https://travis-ci.org/udayakanth1122/ionic2-karma-jasmine-travis-seed) [![Coverage Status](https://coveralls.io/repos/udayakanth1122/ionic2-karma-jasmine-travis-seed/badge.svg?branch=master&service=github)](https://coveralls.io/github/udayakanth1122/ionic2-karma-jasmine-travis-seed?branch=master) [![codecov.io](https://codecov.io/github/udayakanth1122/ionic2-karma-jasmine-travis-seed/coverage.svg?branch=master)](https://codecov.io/github/udayakanth1122/ionic2-karma-jasmine-travis-seed?branch=master)
+
 This project is a seed project that is referring to this [project](https://github.com/lathonez/clicker).
 
 ## Things Covered in this project:
