@@ -20,7 +20,7 @@ This project is a seed project that is referring to this [project](https://githu
 
 **Note** that this project requires node v4.x.x or higher and npm 2.14.7.
 ```bash
-git clone https://github.com/lathonez/clicker.git
+git clone https://github.com/udayakanth1122/ionic2-karma-jasmine-travis-seed.git
 cd clicker
 npm install       # or `npm run reinstall` if you get an error
 npm test          # run unit tests
