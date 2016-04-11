@@ -16,6 +16,18 @@ This project is a seed project that is referring to this [project](https://githu
 4. [Travis](travis-ci.org)
 5. Have access to [Ionic-view](https://apps.ionic.io). This is where the app gets deployed for you to test/share.
 
+
+## How to start
+
+**Note** that this project requires node v4.x.x or higher and npm 2.14.7.
+```bash
+git clone https://github.com/udayakanth1122/ionic2-karma-jasmine-travis-seed.git
+cd clicker
+npm install       # or `npm run reinstall` if you get an error
+npm test          # run unit tests
+npm start         # start the application
+```
+
 ## How to deploy to ionic view through travis-ci
 
 1. Generate an ssh key using the following command:
@@ -91,16 +103,6 @@ This project is a seed project that is referring to this [project](https://githu
   
 8. Commit all your changes and push it into git.
 
-## How to start
-
-**Note** that this project requires node v4.x.x or higher and npm 2.14.7.
-```bash
-git clone https://github.com/udayakanth1122/ionic2-karma-jasmine-travis-seed.git
-cd clicker
-npm install       # or `npm run reinstall` if you get an error
-npm test          # run unit tests
-npm start         # start the application
-```
 
 ## References
 [Deploying to GitHub from Travis-CI](https://aniketpanse.in/2015/autodeploy-github-travis.html)
