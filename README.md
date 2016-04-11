@@ -103,7 +103,6 @@ npm start         # start the application
   
 8. Commit all your changes and push it into git.
 
-
 ## References
 [Deploying to GitHub from Travis-CI](https://aniketpanse.in/2015/autodeploy-github-travis.html)
 
