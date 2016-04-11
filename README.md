@@ -98,6 +98,8 @@ npm start         # start the application
   ```
   ionic upload --email $IONIC_EMAIL --password $IONIC_PASSWORD
   ```
+  **Note** $IONIC_EMAIL and $IONIC_PASSWORD are environment variables in travis-ci. Make sure you provide them.
+  
 8. Commit all your changes and push it into git.
 
 ## References
