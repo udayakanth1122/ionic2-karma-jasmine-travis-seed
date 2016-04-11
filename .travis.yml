@@ -20,6 +20,7 @@ install:
 - npm install
 - npm install ionic-app-lib
 - npm install --save-dev ionic@beta
+- npm install -g cordova
 before_script:
 script: npm test
 notifications:
