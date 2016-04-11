@@ -110,3 +110,4 @@ npm start         # start the application
 [travis-ci encrypted files](https://docs.travis-ci.com/user/encrypting-files/)
 
 [Automated deploys with travis](http://scurker.com/automated-deploys-with-travis/)
+
