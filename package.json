@@ -46,7 +46,7 @@
     "typescript": "1.8.2",
     "typings": "0.6.8"
   },
-  "name": "SampleTest",
+  "name": "clicker",
   "description": "clicker: An Ionic project",
   "cordovaPlugins": [
     "cordova-sqlite-storage",
