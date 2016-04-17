@@ -93,7 +93,7 @@ npm start         # start the application
   git push origin master
   ```
 6. In travis-ci, for your repository go to settings and add the following env variables and their values.
-  IONIC_EMAIL, IONIC_PASSWORD, IONIC_APP_ID and IONIC_API_KEY. You can get the app id and app key from ionic-view console page.
+  IONIC_EMAIL, IONIC_PASSWORD, IONIC_APP_ID and IONIC_API_KEY. You can get the app id and app key (public key) from ionic-view console page.
 
 7. In your deploy.sh file, add the following
 
