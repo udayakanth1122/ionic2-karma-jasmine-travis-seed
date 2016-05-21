@@ -25,6 +25,7 @@ typings/
 www/build/
 $RECYCLE.BIN/
 .io-config.json
+ionic.config.json
 publish-key.pub
 
 .DS_Store
