@@ -13,6 +13,7 @@ chmod 600 .travis/publish-key
 echo "adding encryption file to ssh"
 ssh-add .travis/publish-key
 # using -f as www/build is in .gitignore for dev purposes
+git clean -f
 git add -f www/build/test
 git remote rm origin                                       # originally cloned by travis on https
 git remote add origin git@github.com:udayakanth1122/ionic2-karma-jasmine-travis-seed.git  # ditto
