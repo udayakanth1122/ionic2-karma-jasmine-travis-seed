@@ -19,7 +19,7 @@ before_install:
 install:
 - npm install
 - npm install ionic-app-lib
-- npm install --save-dev ionic@beta
+- npm install --save-dev ionic
 - npm install -g cordova
 before_script:
 script: npm test
