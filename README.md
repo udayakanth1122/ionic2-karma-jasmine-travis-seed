@@ -3,7 +3,7 @@
 This project is a seed project that is referring to this [project](https://github.com/lathonez/clicker).
 
 ## Things Covered in this project:
-1. Writing an app using Ionic2 framework which is based on Angular2. 
+1. Writing an app using Ionic2 framework which is based on Angular2.
 2. Writing code using typescript. (Checkout the controllers, services etc)
 3. Write unit test cases using Karma-Jasmine.
 4. Build and deploy the app using Travis.
@@ -15,7 +15,8 @@ This project is a seed project that is referring to this [project](https://githu
 4. [Travis](travis-ci.org)
 5. Have access to [Ionic-view](https://apps.ionic.io). This is where the app gets deployed for you to test/share.
 
-## How to start
+
+## How to start running the project
 
 **Note** that this project requires node v4.x.x or higher and npm 2.14.7.
 ```bash
@@ -29,7 +30,7 @@ npm start         # start the application
 ## How to deploy to ionic view through travis-ci
 
 1. Generate an ssh key using the following command:
-   
+
    ```bash
    $ ssh-keygen -f publish-key
     Generating public/private rsa key pair.
@@ -38,7 +39,7 @@ npm start         # start the application
     Your identification has been saved in publish-key.
     Your public key has been saved in publish-key.pub.
    ```
-   
+
 2. Encrypt the key
 
    ```
@@ -47,21 +48,21 @@ npm start         # start the application
     encrypting publish-key for udayakanth1122/ionic2-karma-jasmine-travis-seed
     storing result as publish-key.enc
     storing secure env variables for decryption
-    
+
     Please add the following to your build script (before_install stage in your .travis.yml, for instance):
-    
+
         openssl aes-256-cbc -K udayakanth1122@localhost$encrypted_87d9ccdaebfd_key -iv udayakanth1122@localhost$encrypted_87d9ccdaebfd_iv -in publish-key.enc -out publish-key -d
-    
+
     Pro Tip: You can add it automatically by running with --add.
-    
+
     Make sure to add publish-key.enc to the git repository.
     Make sure not to add publish-key to the git repository.
     Commit all changes to your .travis.yml.
   ```
   **Note** Make sure not to add publish-key to the git repository.
-  
+
 3. The unencrypted secret key should be removed
-  
+
   ```
   rm public-key
   ```
