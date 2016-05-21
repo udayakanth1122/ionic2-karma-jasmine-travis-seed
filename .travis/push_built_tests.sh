@@ -3,6 +3,7 @@
 # Helper script run from travis that pushes compiled tests to github so they can be referenced by coverage providers
 #
 # travis clones in a weird way and the head gets detached, so checkout master again
+git checkout .
 git checkout master
 # decrypt private key that gives us push access and add it to ssh agent
 openssl aes-256-cbc -K $encrypted_bef1462fa324_key -iv $encrypted_bef1462fa324_iv -in .travis/publish-key.enc -out .travis/publish-key.pem -d
